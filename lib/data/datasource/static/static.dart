@@ -1,7 +1,7 @@
 import 'package:forget_me_not/model/constant/imageAsset.dart';
 
-import '../../model/onBoardingModel.dart';
+import '../../model/startScreenModel.dart';
 
-List<OnBoardingModel> onBoardingList = [
-  OnBoardingModel(title: "willcommen", body: "Erstelle deine Check-Liste, wir werden\n dich daran erinnern.",
-      image: ImageAsset.onBordingImageOne)];
+List<StartScreenModel> onBoardingList = [
+  StartScreenModel(title: "Willcommen", body: "Erstelle deine Check-Liste, wir werden\n dich daran erinnern.",
+      image: ImageAsset.startImage1)];
