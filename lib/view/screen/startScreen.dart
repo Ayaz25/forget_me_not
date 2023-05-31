@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:forget_me_not/controller/startScreenController.dart';
 import 'package:forget_me_not/view/widget/startScreen/dotPoints.dart';
 import 'package:forget_me_not/view/widget/startScreen/startScreenSlider.dart';
+import 'package:get/get.dart';
 import '../widget/startScreen/startScreenButton.dart';
 
 class StartScreen extends StatelessWidget {
@@ -9,20 +11,21 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(StartScreenControllerImp());
     return const Scaffold(
       body: SafeArea(
           child: Column(
             children: [
               Expanded(
                 flex: 3,
-                child: startScreenSlider()
+                child: StartScreenSlider()
               ),
               Expanded(
                   child: Column(
                     children:[
-                      dotPoints(),
+                      DotPoints(),
                       Spacer(flex: 1),
-                      startButton(),
+                      StartButton(),
               ],))
             ],
           )
