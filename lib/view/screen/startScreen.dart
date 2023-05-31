@@ -1,42 +1,31 @@
 
 import 'package:flutter/material.dart';
-import '../../data/datasource/static/static.dart';
+import 'package:forget_me_not/view/widget/startScreen/dotPoints.dart';
+import 'package:forget_me_not/view/widget/startScreen/startScreenSlider.dart';
+import '../widget/startScreen/startScreenButton.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        child: PageView.builder(
-          itemCount: onBoardingList.length,
-          itemBuilder: (context, i) => Column(
+          child: Column(
             children: [
-              const SizedBox(height: 80),
-              Text(onBoardingList[i].title!,
-                style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 40)),
-              Image.asset(onBoardingList[i].image!,
-              width: 1000,
-              height: 400),
-              Container(
-                width: double.infinity,
-                alignment: Alignment.center,
-                child: Text(onBoardingList[i].body!,
-                    textAlign: TextAlign.center,
-                    style:const TextStyle(fontWeight: FontWeight.normal, fontSize: 15, height: 2))),
-              Container(
-                  height: 40,
-                  margin: const EdgeInsets.only(top: 50.0),
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0)),
-                    padding:const EdgeInsets.symmetric(horizontal: 30, vertical: 2),
-                      textColor: Colors.white,
-                      onPressed: (){}, color: Color(0x7E1842E7), child:const Text("GET STARTED")))
-              ],
+              Expanded(
+                flex: 3,
+                child: startScreenSlider()
+              ),
+              Expanded(
+                  child: Column(
+                    children:[
+                      dotPoints(),
+                      Spacer(flex: 1),
+                      startButton(),
+              ],))
+            ],
           )
-        ) ,
       )
     );
   }
