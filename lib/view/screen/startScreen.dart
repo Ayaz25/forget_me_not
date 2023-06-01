@@ -13,6 +13,7 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(StartScreenControllerImp());
     return const Scaffold(
+      backgroundColor: Color(0xfff7f7f5),
       body: SafeArea(
           child: Column(
             children: [

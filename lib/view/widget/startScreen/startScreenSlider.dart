@@ -17,20 +17,20 @@ class StartScreenSlider extends GetView<StartScreenControllerImp> {
         itemCount: onBoardingList.length,
         itemBuilder: (context, i) => Column(
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 100),
               Image.asset(onBoardingList[i].image!),
               const SizedBox(height: 30),
               Container(
                 width: double.infinity,
                 alignment: Alignment.center,
                 child:Text(onBoardingList[i].title!,textAlign: TextAlign.center,
-                    style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),),
+                    style: Theme.of(context).textTheme.headline1)),
               const SizedBox(height: 30),
               Container(
                   width: double.infinity,
                   alignment: Alignment.center,
                   child:  Text(onBoardingList[i].body!, textAlign: TextAlign.center,
-                    style:const TextStyle(height: 2, color: Colors.black45, fontWeight: FontWeight.bold),))
+                    style: Theme.of(context).textTheme.bodyText2))
 
             ])
     );
