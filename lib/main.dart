@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           headline2: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
-          bodyText1:TextStyle(height: 2, color: Colors.black45, fontWeight: FontWeight.bold)
+          bodyText1: TextStyle(height: 2, color: Colors.black45, fontWeight: FontWeight.bold),
+          bodyText2: TextStyle(height: 2, color: Colors.black45, fontWeight: FontWeight.bold, fontSize: 14),
         ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

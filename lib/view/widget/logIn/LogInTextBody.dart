@@ -11,7 +11,7 @@ class LogInTextBody extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 25),
       child: Text(bodyText,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyText1),
+          style: Theme.of(context).textTheme.bodyText2),
     );
   }
 }
